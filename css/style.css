@@ -38,6 +38,10 @@ p {
 .fixed img {
     width: 50px;
 }
+li 
+{
+    list-style-type: none;
+}
 
 /*!---------HEADER---------*/
 
@@ -103,11 +107,16 @@ header nav ul li {
 }
 .offers section {
     z-index: 0;
-    width: 30%;
+    width: 50%;
     border: 5px solid black;
 }
 .offers section h5 {
     font-family: 'Yuji Boku', serif;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+.offers section p {
+    font-family: 'Yuji Boku', serif;
+    background-color: rgba(0, 0, 0, 0.404);
 }
 .offers p {
     margin-bottom: 20px;
@@ -205,11 +214,17 @@ footer h2 {
         flex-direction: column;
         position: static;
     }
+    .offers section {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 400px)
 {
     header nav ul{
         flex-direction: column;
         position: static;
+    }
+    .offers section {
+        width: 100%;
     }
 }
