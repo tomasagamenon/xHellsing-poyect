@@ -1,0 +1,215 @@
+
+/*!---------FONT---------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+
+/*!---------RESET---------*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*!---------OTHERS---------*/
+
+body {
+    background-color: black;
+}
+/*--TEMP--*/
+p {
+    color: white;
+    text-align: center;
+    font-family: 'Yuji Boku', serif;
+}
+.button {
+    color: white;
+    text-decoration: none;
+    font-family: 'Yuji Boku', serif;
+    background-color: brown;
+    padding: 5px;
+    border-radius: 5px;
+}
+/*----*/
+.fixed {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
+.fixed img {
+    width: 50px;
+}
+
+/*!---------HEADER---------*/
+
+header {
+    background-color:rgb(46, 25, 59);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+}
+header h1 {
+    color: black;
+    font-size: 45px;
+    font-family: 'Yuji Boku', serif;
+    font-weight: 900;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+header nav ul li {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/*!---------MAIN---------*/
+
+.grid-container-main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "offers offers"
+    "info products"
+    ;
+}
+.offers {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: offers;
+}
+.offers h2 {
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid white;
+    background-color: black;
+    font-family: 'Yuji Boku', serif;
+}
+.offers section {
+    z-index: 0;
+    width: 30%;
+    border: 5px solid black;
+}
+.offers section h5 {
+    font-family: 'Yuji Boku', serif;
+}
+.offers p {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.info{
+    grid-area: info;
+}
+.info h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Yuji Boku', serif;
+}
+.products {
+    margin: 10px;
+    grid-area: products;
+}
+.products h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Yuji Boku', serif;
+}
+.products h3 {
+    color: white;
+    font-family: 'Yuji Boku', serif;
+}
+.products img {
+    width: 200px;
+    height: 200px;
+}
+.productsContainer {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid white;
+    flex-wrap: wrap;
+}
+.productsContainer div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+main form {
+    color: white;
+    margin: 5px;
+}
+
+/*!---------FOOTER---------*/
+
+footer {
+    background-color: white;
+}
+footer img {
+    width: 50px;
+    height: 50px;
+}
+footer ul {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+footer h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Yuji Boku', serif;
+}
+
+/*!---------PSEUDO CLASS---------*/
+
+.button:hover{
+    background-color: #5c1717;
+}
+.button:active{
+    background-color: #240909;
+}
+
+/*!---------MOBILE FIRST---------*/
+
+@media screen and (max-width: 800px)
+{
+    .grid-container-main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "offers"
+        "info"
+        "products"
+        ;
+    }
+    header{
+        flex-direction: column;
+        position: static;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    header nav ul{
+        flex-direction: column;
+        position: static;
+    }
+}
