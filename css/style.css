@@ -29,6 +29,11 @@ p {
     padding: 5px;
     border-radius: 5px;
 }
+.stock {
+    font-size: 30px;
+    justify-self: center;
+    margin: 350px;
+}
 /*----*/
 .fixed {
     position: fixed;
