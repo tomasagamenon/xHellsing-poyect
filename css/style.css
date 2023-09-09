@@ -32,7 +32,10 @@ p {
 .stock {
     font-size: 30px;
     justify-self: center;
-    margin: 350px;
+    margin-top: 350px;
+    margin-bottom: 350px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 /*----*/
 .fixed {
@@ -229,7 +232,11 @@ footer h2 {
 }
 
 /*!---------MOBILE FIRST---------*/
-
+@media  screen and (max-width: 1000px) {
+    .stock{
+        font-size: 25px;
+    }
+}
 @media screen and (max-width: 800px)
 {
     .grid-container-main{

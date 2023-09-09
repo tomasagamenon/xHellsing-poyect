@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap");
+main .grid-container-main, main .products .productsContainer div ul {
+  display: grid;
+  grid-template-rows: auto; }
+
+/*!---------FONT---------*/
+/*!---------RESET---------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*!---------OTHERS---------*/
+body {
+  background-color: black; }
+
+/*--TEMP--*/
+p {
+  color: white;
+  text-align: center;
+  font-family: 'Yuji Boku', serif; }
+
+a {
+  color: white; }
+
+.button {
+  color: white;
+  text-decoration: none;
+  font-family: 'Yuji Boku', serif;
+  background-color: brown;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 1s; }
+
+.button:hover {
+  background-color: #5c1717;
+  color: black; }
+
+.button:active {
+  background-color: #240909; }
+
+.stock {
+  font-size: 30px;
+  justify-self: center;
+  margin-top: 350px;
+  margin-bottom: 350px;
+  margin-left: 50px;
+  margin-right: 50px; }
+
+/*----*/
+.fixed {
+  position: fixed;
+  bottom: 100px;
+  right: 50px; }
+  .fixed img {
+    width: 50px;
+    transition: 1s; }
+  .fixed img:hover {
+    transform: scale(1.2); }
+
+li {
+  list-style-type: none; }
+
+h2 {
+  color: white;
+  font-family: 'Yuji Boku', serif; }
+
+header {
+  background-color: #2e193b;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1; }
+  header h1 {
+    color: black;
+    font-size: 45px;
+    font-family: 'Yuji Boku', serif;
+    font-weight: 900;
+    text-shadow: 0px 0px 16px rgba(152, 3, 215, 0.8);
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: initial; }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 0;
+    width: 100%; } }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; }
+    header nav ul li {
+      margin-right: 10px;
+      margin-bottom: 20px; }
+
+main .grid-container-main {
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas: "offers offers" "info products"; }
+  main .grid-container-main .offers {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    grid-area: offers; }
+    main .grid-container-main .offers h2 {
+      text-align: center;
+      padding: 5px;
+      border: 2px solid white;
+      background-color: black; }
+    main .grid-container-main .offers section {
+      z-index: 0;
+      width: 50%;
+      border: 5px solid black; }
+      main .grid-container-main .offers section h5 {
+        font-family: 'Yuji Boku', serif;
+        background-color: #2e193b; }
+      main .grid-container-main .offers section p {
+        margin-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 10px; }
+  main .grid-container-main .info {
+    grid-area: info; }
+    main .grid-container-main .info h2 {
+      text-align: center; }
+
+main .products {
+  margin: 10px;
+  grid-area: products;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; }
+  main .products h2 {
+    text-align: center; }
+  main .products h3 {
+    color: white;
+    font-family: 'Yuji Boku', serif; }
+  main .products a {
+    text-align: center; }
+  main .products img {
+    width: 200px;
+    height: 200px; }
+  main .products .productsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid white;
+    flex-wrap: wrap; }
+    main .products .productsContainer div {
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+      transition: 1s; }
+      main .products .productsContainer div ul {
+        text-align: center;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas: "image info" "button button";
+        margin: 10px; }
+        main .products .productsContainer div ul image {
+          grid-area: image; }
+        main .products .productsContainer div ul p {
+          grid-area: info;
+          width: 200px; }
+        main .products .productsContainer div ul .button {
+          grid-area: button; }
+    main .products .productsContainer div:hover {
+      transform: scale(1.1); }
+
+main .infoPages div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px; }
+  main .infoPages div p {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px; }
+  main .infoPages div img {
+    width: 500px;
+    height: 500px; }
+
+main form div input {
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: solid white;
+  background-color: black;
+  color: white;
+  transition: width 0.4s ease-in-out; }
+
+main form div input:focus {
+  width: 100%; }
+
+main form div select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1; }
+
+main form div textarea {
+  width: 100%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: black;
+  resize: none; }
+
+main form div input[type=button], main form div input[type=submit], main form div input[type=reset] {
+  background-color: brown;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer; }
+
+main form div .sex {
+  display: flex;
+  align-items: center; }
+  main form div .sex input {
+    width: 5%; }
+
+main .product ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column; }
+  main .product ul li {
+    margin: 10px; }
+
+form {
+  color: white;
+  margin: 5px; }
+
+footer {
+  background-color: white; }
+  footer h2 {
+    color: black;
+    text-align: center; }
+  footer ul {
+    display: flex;
+    align-items: center;
+    margin: 10px; }
+    footer ul img {
+      width: 50px;
+      height: 50px;
+      transition: 1s; }
+    footer ul img:hover {
+      transform: scale(1.1); }
+
+@media screen and (max-width: 1000px) {
+  .stock {
+    font-size: 25px; }
+  main .infoPages div p {
+    font-size: 20px; }
+  main .infoPages div img {
+    width: 300px;
+    height: 300px; } }
+
+@media screen and (max-width: 800px) {
+  .grid-container-main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "offers" "info" "products"; }
+  header {
+    flex-direction: column;
+    position: static; }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; }
+    to {
+      margin-left: 66%;
+      width: 100%; } }
+  main .grid-container-main .offers section {
+    width: 70%; }
+  main .grid-container-main .products .productsContainer div ul {
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "info" "button";
+    margin: 10px; }
+  main .products .productsContainer div ul {
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "info" "button";
+    margin: 10px; }
+  main .infoPages div p {
+    font-size: 15px; }
+  main .infoPages div img {
+    width: 200px;
+    height: 200px; } }
+
+@media screen and (max-width: 450px) {
+  header nav ul {
+    flex-direction: column;
+    position: static; }
+  main .grid-container-main .offers section {
+    width: 100%; }
+  main .grid-container-main .products .productsContainer div ul li img {
+    width: 100px;
+    height: 100px; }
+  main .grid-container-main .products .productsContainer div ul li p {
+    font-size: 15px;
+    width: 100px; }
+  main .infoPages div p {
+    font-size: 10px; }
+  main .infoPages div img {
+    width: 100px;
+    height: 100px; } }
